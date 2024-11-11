@@ -12,17 +12,6 @@
 # You should use a while loop inside the function to calculate the factorial.
 
 
-def factorial(n : int):
- while n < 0 :
-  return "Factorial is not defined for non negative numbers"
- while n == 0 or n == 1 :
-  return 1
- while n > 1:
-  return n * factorial(n-1)
-
-Your_number= input("What is integer do you want the factorial of? ")
-
-print(factorial (int(Your_number)))
 
 
 
@@ -49,36 +38,31 @@ game_logo = """
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
             """
 
-total_chances = ['💖','💖','💖','💖','💖']
+
 win_emoji = '🏆🎉'
 lose_emoji = '💔😭'
 
 from random import randint
 
 def Game():
-    chance= 5
+    chance= ['💖','💖','💖','💖','💖']
     Correct_Number= randint(1,100)
-    
-    while chance > 0:
+      
+    while chance.count('💖') > 0:
       Guess= int(input("Guess a number between 1 and 100! "))
-      chance -= 1 
       
       if Guess > Correct_Number :   
         print ("Too high")
-      elif chance == 0:
-        print ("You lost")
-        print (f"The correct number was {Correct_Number}")
-        break      
+        chance.remove(;)
       if Guess < Correct_Number:
         print ("Too Low")
-      elif chance == 0:
-        print ("You lost")
-        print (f"The correct number was {Correct_Number}")
-        break
-      elif chance > 0 and Guess == Correct_Number:
-        print("You are a winner")
+        chance.replace('💖', '💔')
+      if chance > 0 and Guess == Correct_Number:
+        print("You are a winner 🏆🎉")
         break   
- 
+    if chance == ['💔','💔','💔','💔','💔'] :
+      print (f"The correct number was {Correct_Number}💔😭")
+  
         
 Game()
 
@@ -86,31 +70,31 @@ Game()
 
         
        
-def nested_sum(data):
-    total = 0 
+# def nested_sum(data):
+#     total = 0 
     
    
-    for key, value in data.items():
+#     for key, value in data.items():
         
        
-        if isinstance(value, int):
-            total += value
+#         if isinstance(value, int):
+#             total += value
         
-        elif isinstance(value, dict):
-            total += nested_sum(value)
+#         elif isinstance(value, dict):
+#             total += nested_sum(value)
         
        
-        elif isinstance(value, list):
-            for item in value:
+#         elif isinstance(value, list):
+#             for item in value:
                
-                if isinstance(item, int):
-                    total += item
-                elif isinstance(item, dict):
-                    total += nested_sum(item)
-                elif isinstance(item, list):
-                    total += nested_sum({"temp": item})
+#                 if isinstance(item, int):
+#                     total += item
+#                 elif isinstance(item, dict):
+#                     total += nested_sum(item)
+#                 elif isinstance(item, list):
+#                     total += nested_sum({"temp": item})
     
-    return total
+#     return total
 
 
 
