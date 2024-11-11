@@ -65,7 +65,7 @@ class Person:
             self.occupation = new_occupation
             print(f"Hello! This is {self.name} aged {self.age} working as a {self.occupation}")
  
-person_1= Person("Christina, 19, "Project Manager")
+person_1= Person("Christina", 19, "Project Manager")
 person_2= Person("Bamlak", 23, "Civil Engineer")
 
 person_1.introduce()
